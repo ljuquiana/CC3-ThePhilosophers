@@ -10,45 +10,32 @@ namespace Engine.Factories
             switch (monsterID)
             {
                 case 1:
-                    Monster snake =
-                        new Monster("Snake", "Snake.png", 4, 4, 5, 1);
+                    Monster nymphs =
+                        new Monster("Nymphs", "Nymphs.png", 4, 4, 5, 1);
 
-                    snake.CurrentWeapon = ItemFactory.CreateGameItem(1501);
+                    nymphs.CurrentWeapon = ItemFactory.CreateGameItem(1501);
 
-                    AddLootItem(snake, 9001, 25);
-                    AddLootItem(snake, 9002, 75);
-                    return snake;
+                    AddLootItem(nymphs, 300, 25);
+                    AddLootItem(nymphs, 303, 75);
+                    return nymphs;
 
                 case 2:
-                    Monster rat =
-                        new Monster("Rat", "Rat.png", 5, 5, 5, 1);
+                    Monster trolls =
+                        new Monster("Trolls", "Trolls.png", 5, 5, 5, 1);
 
-                    rat.CurrentWeapon = ItemFactory.CreateGameItem(1502);
+                    trolls.CurrentWeapon = ItemFactory.CreateGameItem(1502);
 
-                    AddLootItem(rat, 9003, 25);
-                    AddLootItem(rat, 9004, 75);
-                    return rat;
+                    AddLootItem(trolls, 302, 25);
+                    return trolls;
 
                 case 3:
-                    Monster giantSpider =
+                    Monster shadowfangWyrm =
 
-                        new Monster("Giant Spider", "Spider.png", 10, 10, 10, 3);
+                        new Monster("Shadowfang Wyrm", "shadowfangWyrm.png", 50, 25, 10, 50);
 
-                    giantSpider.CurrentWeapon = ItemFactory.CreateGameItem(1503);
-                    AddLootItem(giantSpider, 9005, 25);
-                    AddLootItem(giantSpider, 9006, 75);
-                    return giantSpider;
-
-                case 4:
-                    Monster goblin =
-                    new Monster("Goblin", "Goblin.png", 9, 9, 9, 3);
-
-
-                    goblin.CurrentWeapon = ItemFactory.CreateGameItem(1504);
-
-                    AddLootItem(goblin, 9007, 25);
-                    AddLootItem(goblin, 9008, 75);
-                    return goblin;
+                    ShadowfangWyrm.CurrentWeapon = ItemFactory.CreateGameItem(1503);
+                    AddLootItem(shadowfangWyrm, 301, 100);
+                    return shadowfangWyrm;
 
                 default:
                     throw new ArgumentException(string.Format("MonsterType '{0}' does not exist", monsterID));
