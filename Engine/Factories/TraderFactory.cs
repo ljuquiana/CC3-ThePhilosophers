@@ -1,4 +1,4 @@
-﻿using Engine.Models;
+using Engine.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,15 +12,24 @@ namespace Engine.Factories
         private static readonly List<Trader> _traders = new List<Trader>();
         static TraderFactory()
         {
-            Trader susan = new Trader("Susan");
-            susan.AddItemToInventory(ItemFactory.CreateGameItem(1001));
-            Trader farmerTed = new Trader("Farmer Ted");
-            farmerTed.AddItemToInventory(ItemFactory.CreateGameItem(1001));
-            Trader peteTheHerbalist = new Trader("Pete the Herbalist");
-            peteTheHerbalist.AddItemToInventory(ItemFactory.CreateGameItem(1001));
-            AddTraderToList(susan);
-            AddTraderToList(farmerTed);
-            AddTraderToList(peteTheHerbalist);
+            Trader mayor = new Trader("Mayor Isabello Hayes");
+            mayor.AddItemToInventory(ItemFactory.CreateGameItem(303));
+            Trader elenion = new Trader("Elenion Evergreen");
+            elenion.AddItemToInventory(ItemFactory.CreateGameItem(303));
+            Trader silvannus = new Trader("Silvannus");
+            silvannus.AddItemToInventory(ItemFactory.CreateGameItem(303));
+            Trader mystara = new Trader("Mystara");
+            mystara.AddItemToInventory(ItemFactory.CreateGameItem(303));
+            Trader casimir = new Trader("Casimir");
+            casimir.AddItemToInventory(ItemFactory.CreateGameItem(303));
+            Trader ethereal = new Trader("Ethereal Whisperer");
+            ethereal.AddItemToInventory(ItemFactory.CreateGameItem(303));
+            AddTraderToList(mayor);
+            AddTraderToList(elenion);
+            AddTraderToList(silvannus);
+            AddTraderToList(mystara);
+            AddTraderToList(casimir);
+            AddTraderToList(ethereal);
         }
         public static Trader GetTraderByName(string name)
         {
