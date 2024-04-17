@@ -10,29 +10,21 @@ namespace Engine.Factories
         private static readonly List<GameItem> _standardGameItems = new List<GameItem>();
         static ItemFactory()
         {
-            BuildWeapon(1001, "Pointy Stick", 1, 1, 2);
-            BuildWeapon(1002, "Silver Sword", 5, 5, 8);
+            BuildWeapon(100, "Basic Sword", 0, 3, 5);
+            BuildWeapon(101, "Astral Slicer", 0, 20, 25);
+            BuildWeapon(102, "Celestial Blade", 0, 20, 25);
+            BuildWeapon(103, "SwiftShot", 15, 0, 0);
+            
+            BuildHealingItem(200, "Heal Potion", 20, 0);
 
-            BuildHealingItem(2001, "Healing Potion", 5, 2);
-
-            BuildMiscellaneousItem(3001, "Oats", 1);
-            BuildMiscellaneousItem(3002, "Honey", 2);
-            BuildMiscellaneousItem(3003, "Raisins", 2);
-
-            BuildWeapon(1501, "Snake fangs", 0, 0, 2);
-            BuildWeapon(1502, "Rat claws", 0, 0, 2);
-            BuildWeapon(1503, "Spider fangs", 0, 0, 4);
-            BuildWeapon(1504, "Rusty Sword", 0, 0, 5);
-
-
-            BuildMiscellaneousItem(9001, "Snake fang", 1);
-            BuildMiscellaneousItem(9002, "Snakeskin", 2);
-            BuildMiscellaneousItem(9003, "Rat tail", 1);
-            BuildMiscellaneousItem(9004, "Rat fur", 2);
-            BuildMiscellaneousItem(9005, "Spider fang", 1);
-            BuildMiscellaneousItem(9006, "Spider silk", 2);
-            BuildMiscellaneousItem(9007, "Gold", 1);
-            BuildMiscellaneousItem(9008, "Cloth", 2);
+            BuildWeapon(1501, "Nymphs Claws", 2, 2, 2);
+            BuildWeapon(1502, "Trolls Magic", 4, 4, 4);
+            BuildWeapon(1503, "Shadowfang Wyrm", 50, 25, 50);
+            
+            BuildMiscellaneousItem(300, "Eclipse Shard", 1);
+            BuildMiscellaneousItem(301, "Spectral Specter", 0);
+            BuildMiscellaneousItem(302, "Moon Petals", 0);
+            BuildMiscellaneousItem(303, "Drowsy Wings", 0);
         }
         public static GameItem CreateGameItem(int itemTypeID)
         {
