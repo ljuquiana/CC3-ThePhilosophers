@@ -8,12 +8,10 @@ namespace Engine.Factories
         private static readonly List<Recipe> _recipes = new List<Recipe>();
         static RecipeFactory()
         {
-            Recipe granolaBar = new Recipe(1, "Healing Potion");
-            granolaBar.AddIngredient(3001, 1);
-            granolaBar.AddIngredient(3002, 1);
-            granolaBar.AddIngredient(3003, 1);
-            granolaBar.AddOutputItem(2001, 1);
-            _recipes.Add(granolaBar);
+            Recipe HealPotion = new Recipe(1, "Healing Potion");
+            HealPotion.AddIngredient(302, 1);
+            HealPotion.AddIngredient(300, 1);
+            _recipes.Add(HealPotion);
         }
         public static Recipe RecipeByID(int id)
         {
