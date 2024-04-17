@@ -1,3 +1,4 @@
+world factory 
 ﻿using Engine.Models;
 using System;
 using System.Collections.Generic;
@@ -12,49 +13,71 @@ namespace Engine.Factories
         internal static World CreateWorld()
         {
             World newWorld = new World();
-            newWorld.AddLocation(-2, -1, "Farmer's Field",
-                "There are rows of corn growing here, with giant rats hiding between them.",
-                "CornField.png");
-            newWorld.LocationAt(-2, -1).AddMonster(2, 100);
-            newWorld.AddLocation(-1, -1, "Farmer's House",
-                "This is the house of your neighbor, Farmer Ted.",
-                "Farmhouse.png");
-            newWorld.LocationAt(-1, -1).TraderHere =
-                TraderFactory.GetTraderByName("Farmer Ted");
             newWorld.AddLocation(0, -1, "Home",
                 "This is your home",
-                "Home.png");
-            newWorld.AddLocation(-1, 0, "Trading Shop",
-                "The shop of Susan, the trader.",
-                "TraderHouse.png");
-            newWorld.LocationAt(-1, 0).TraderHere =
-                TraderFactory.GetTraderByName("Susan");
-            newWorld.AddLocation(0, 0, "Town square",
-                "You see a fountain in the center.",
-                "TownSquare.png");
-            newWorld.AddLocation(1, 0, "Town Gate",
-                "There is a gate here, protecting the town from Monsters.",
-                "TownGate.png");
-            newWorld.AddLocation(2, 0, " Forest",
-                "This Forest is full of Spiders.",
-                "Forest.png");
-            newWorld.LocationAt(2, 0).AddMonster(3, 90);
+                "pack://application:,,,/Engine;component/Images/Locations/Home.png");
 
-            newWorld.AddLocation(3, 0, " Deep Forest",
-                "Becareful of the Green Guy",
-                "DeepForest.png");
-            newWorld.LocationAt(3, 0).AddMonster(4, 50);
+            newWorld.AddLocation(0, 0, "Town Plaza",
+                "It is a place where the left and right wing of the world connects",
+                "pack://application:,,,/Engine;component/Images/Locations/TownP.png");
 
-            newWorld.AddLocation(0, 1, "Herbalist's hut",
-                "You see a small hut, with plants drying from the roof.",
-                "HerbalistHut.png");
-            newWorld.LocationAt(0, 1).TraderHere =
-               TraderFactory.GetTraderByName("Pete the Herbalist");
-            newWorld.LocationAt(0, 1).QuestsAvailableHere.Add(QuestFactory.GetQuestByID(1));
-            newWorld.AddLocation(0, 2, "Herbalist's garden",
-                "There are many plants here, with snakes hiding behind them.",
-                "HerbalistGarden.png");
-            newWorld.LocationAt(0, 2).AddMonster(1, 100);
+            newWorld.AddLocation(0, 1, "Town Hall",
+                "Meet the mayor!",
+                "pack://application:,,,/Engine;component/Images/Locations/TownH.png");
+            newWorld.LocationAt( 0, 1).QuestAvailableHere.Add(QuestFactory.GetQuestByID(1));
+
+            newWorld.AddLocation(-1, 0, "Maple Grove Park",
+                "A park that you can pass your time by.",
+                "pack://application:,,,/Engine;component/Images/Locations/Maple.png");
+
+            newWorld.AddLocation(-1, -1, "Mystic Market",
+                "Buy all you want.",
+                "pack://application:,,,/Engine;component/Images/Locations/Mystic.png");
+
+            newWorld.AddLocation(-1, 1, "Fadewood",
+                "Meet an NPC. Maybe you can get something",
+                "pack://application:,,,/Engine;component/Images/Locations/Fadewood.png");
+            newWorld.LocationAt( -1, 1).QuestAvailableHere.Add(QuestFactory.GetQuestByID(5));
+
+
+            newWorld.AddLocation(-2, 0, "Everclear Mountain",
+                "A place where some things might end. You or the boss.",
+                "pack://application:,,,/Engine;component/Images/Locations/Mountain.png");
+
+            newWorld.AddLocation(-2, -1, "Dark Lair",
+                "A dark place with a bright mission.",
+                "pack://application:,,,/Engine;component/Images/Locations/DarkLair.png");
+            newWorld.LocationAt( -2, -1).QuestAvailableHere.Add(QuestFactory.GetQuestByID(3));
+
+            newWorld.AddLocation(1, 0, "Station",
+                "Connects three location that you can go to.",
+                "pack://application:,,,/Engine;component/Images/Locations/Station.png");
+
+            newWorld.AddLocation(1, -1, "Murkwood",
+                "Mushroom Houses!",
+                "pack://application:,,,/Engine;component/Images/Locations/Murkwood.png");
+            newWorld.LocationAt( 1, -1).QuestAvailableHere.Add(QuestFactory.GetQuestByID(4));
+
+
+            newWorld.AddLocation(1, 1, "Abbysal Sanctum",
+                "Meet and greet in the unknown.",
+                "pack://application:,,,/Engine;component/Images/Locations/Sanctum.png");
+            newWorld.LocationAt( 1, 1).QuestAvailableHere.Add(QuestFactory.GetQuestByID(6));
+
+
+            newWorld.AddLocation(-1, 2, "Twilight Citadel",
+                "Yellow flowers everywhere.",
+                "pack://application:,,,/Engine;component/Images/Locations/Citadel.png");
+
+            newWorld.AddLocation(2, 0, "Crimson Ridge",
+                "A village with elves.",
+                "pack://application:,,,/Engine;component/Images/Locations/Ridge.png");
+            newWorld.LocationAt( 2, 0).QuestAvailableHere.Add(QuestFactory.GetQuestByID(2));
+
+
+            newWorld.AddLocation(2, 1, "Crimson Crest",
+                "Nymphs everywhere!",
+                "pack://application:,,,/Engine;component/Images/Locations/Crest.png");
             return newWorld;
         }
     }
