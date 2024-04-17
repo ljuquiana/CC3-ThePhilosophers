@@ -7,34 +7,43 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Images\Locations\CornField.png" />
-    <None Remove="Images\Locations\DeepForest.png" />
-    <None Remove="Images\Locations\FarmHouse.png" />
-    <None Remove="Images\Locations\Forest.png" />
-    <None Remove="Images\Locations\HerbalistGarden.png" />
-    <None Remove="Images\Locations\HerbalistHut.png" />
     <None Remove="Images\Locations\Home.png" />
-    <None Remove="Images\Locations\TownGate.png" />
-    <None Remove="Images\Locations\TownSquare.png" />
-    <None Remove="Images\Locations\TraderHouse.png" />
-    <None Remove="Images\Monsters\Goblin.png" />
-    <None Remove="Images\Monsters\Rat.png" />
-    <None Remove="Images\Monsters\Snake.png" />
-    <None Remove="Images\Monsters\Spider.png" />
+    <None Remove="Images\Locations\TownP.png" />
+    <None Remove="Images\Locations\TownH.png" />
+    <None Remove="Images\Locations\Station.png" />
+    <None Remove="Images\Locations\Mytic.png" />
+    <None Remove="Images\Locations\DarkLair.png" />
+    <None Remove="Images\Locations\Citadel.png" />
+    <None Remove="Images\Locations\Crest.png" />
+    <None Remove="Images\Locations\FadeWood.png" />
+    <None Remove="Images\Locations\Maple.png" />
+    <None Remove="Images\Locations\Mountain.png" />
+    <None Remove="Images\Locations\Murkwood.png" />
+    <None Remove="Images\Locations\Ridge.png" />
+    <None Remove="Images\Locations\Sanctum.png" />
+    <None Remove="Images\Monsters\Nymphs.png" />
+    <None Remove="Images\Monsters\Trolls.png" />
+    <None Remove="Images\Monsters\ShadowfangWyrm.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Images\Locations\CornField.png" />
-    <Resource Include="Images\Locations\DeepForest.png" />
-    <Resource Include="Images\Locations\FarmHouse.png" />
-    <Resource Include="Images\Locations\Forest.png" />
-    <Resource Include="Images\Locations\HerbalistGarden.png" />
-    <Resource Include="Images\Locations\HerbalistHut.png" />
     <Resource Include="Images\Locations\Home.png" />
-    <Resource Include="Images\Locations\TownGate.png" />
-    <Resource Include="Images\Locations\TownSquare.png" />
-    <Resource Include="Images\Locations\TraderHouse.png" />
-    <Resource Include="Images\Monsters\Goblin.png">
+    <Resource Include="Images\Locations\TownP.png" />
+    <Resource Include="Images\Locations\TownH.png" />
+    <Resource Include="Images\Locations\Station.png" />
+    <Resource Include="Images\Locations\Mystic.png" />
+    <Resource Include="Images\Locations\DarkLair.png" />
+    <Resource Include="Images\Locations\Citadel.png" />
+    <Resource Include="Images\Locations\Crest.png" />
+    <Resource Include="Images\Locations\Fadewood.png" />
+    <Resource Include="Images\Locations\Maple.png" />
+    <Resource Include="Images\Locations\Mountain.png" />
+    <Resource Include="Images\Locations\Murkwood.png" />
+    <Resource Include="Images\Locations\Ridge.png" />
+    <Resource Include="Images\Locations\Sanctum.png" />
+    <Resource Include="Images\Monsters\Nymphs.png">
+    <Resource Include="Images\Monsters\Trolls.png">
+    <Resource Include="Images\Monsters\ShadowfangWyrm.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\Monsters\Rat.png">
