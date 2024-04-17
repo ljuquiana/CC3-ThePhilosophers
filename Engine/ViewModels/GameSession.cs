@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using Engine.EventArgs;
 using Engine.Factories;
@@ -103,17 +103,16 @@ namespace Engine.ViewModels
         #endregion
         public GameSession()
         {
-            CurrentPlayer = new Player("Naruto", "Ninja", 0, 30, 40, 1000);
+            CurrentPlayer = new Player("Secret", "Dyran", 0, 30, 40, 1000);
             if (!CurrentPlayer.Weapons.Any())
             {
-                CurrentPlayer.AddItemToInventory(ItemFactory.CreateGameItem(1001));
+                CurrentPlayer.AddItemToInventory(ItemFactory.CreateGameItem(101));
             }
-            CurrentPlayer.AddItemToInventory(ItemFactory.CreateGameItem(2001));
+            CurrentPlayer.AddItemToInventory(ItemFactory.CreateGameItem(201));
 
             CurrentPlayer.LearnRecipe(RecipeFactory.RecipeByID(1));
-            CurrentPlayer.AddItemToInventory(ItemFactory.CreateGameItem(3001));
-            CurrentPlayer.AddItemToInventory(ItemFactory.CreateGameItem(3002));
-            CurrentPlayer.AddItemToInventory(ItemFactory.CreateGameItem(3003));
+            CurrentPlayer.AddItemToInventory(ItemFactory.CreateGameItem(302));
+            CurrentPlayer.AddItemToInventory(ItemFactory.CreateGameItem(303));
 
             CurrentWorld = WorldFactory.CreateWorld();
             CurrentLocation = CurrentWorld.LocationAt(0, -1);
@@ -265,7 +264,7 @@ namespace Engine.ViewModels
         private void OnCurrentPlayerKilled(object sender, System.EventArgs eventArgs)
         {
             RaiseMessage("");
-            RaiseMessage("You have been killed.");
+            RaiseMessage("Ouch! Dead.");
             CurrentLocation = CurrentWorld.LocationAt(0, -1);
             CurrentPlayer.CompletelyHeal();
         }
